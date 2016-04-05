@@ -1,0 +1,16 @@
+<ion-view view-title="Schedule">
+  <ion-content>
+    <h1 class="text-center">{{day.fields.Name}} <br/> {{day.fields.Day}}</h1>
+    <ion-item class = "list card" ng-repeat="activity in activities" href="#/app/playlists/{{day.id}}/{{activity.id}}">
+      <div class="item item-icon-left">
+        <b>Activity: </b>{{activity.fields.Name}}
+      </div>
+      <div class="item item-icon-left">
+        <b>Description: </b>{{activity.fields.Description}}
+      </div>
+      <div class="item item-icon-left">
+        <b>Hour: </b>{{activity.fields.Hour}}
+      </div>
+    </ion-item>
+  </ion-content>
+</ion-view>

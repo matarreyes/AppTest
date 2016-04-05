@@ -1,0 +1,19 @@
+<ion-view view-title="Today">
+  <ion-content>
+    <h2 class="text-center" ng-if="isNotToday"> Nothing for today </h2>
+    <h1 class="text-center">{{today.fields.Name}} <br/> {{today.fields.Day}}</h1>
+
+    <ion-item class = "list card" ng-repeat="activity in activities" href="#/app/playlists/{{today.id}}/{{activity.id}}">
+      <div class="item item-icon-left">
+        <b>Activity: </b>{{activity.fields.Name}}
+      </div>
+      <div class="item item-icon-left">
+        <b>Description: </b>{{activity.fields.Description}}
+      </div>
+      <div class="item item-icon-left">
+        <b>Hour: </b>{{activity.fields.Hour}}
+      </div>
+    </ion-item>
+
+  </ion-content>
+</ion-view>
