@@ -17,13 +17,6 @@ body {
 .box-height > a {
   background-color: unset!important;
 }
-/*.item-thumbnail-left.item-complex, .item-thumbnail-left {*/
-  /*width: 50%;*/
-  /*padding: 0px 0.4%;*/
-  /*padding-bottom: 0.5%;*/
-  /*border: none;*/
-  /*float: left;*/
-/*}*/
 
 .box-height {
   height: 130px;
