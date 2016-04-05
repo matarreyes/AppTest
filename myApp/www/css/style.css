@@ -42,18 +42,7 @@ body {
 h1, h2, h3, h4, h5, p, div {
   font-family: 'Montserrat', sans-serif;
 }
-/*
-.item-p-days .days-date {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 10px;
-  display: inline-block;
-  background: rgba(82, 185, 220, 0.3);
-  padding: 5px;
-  padding-top: 15px;
-  color: #145368;
-  margin: 0;
-}
-*/
+
 .item-p-days .days-step {
   color: #fff;
   text-transform: capitalize;
