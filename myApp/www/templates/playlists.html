@@ -1,35 +1,35 @@
 <ion-view view-title="Agenda">
-  <ion-content>
+  <ion-content class="backgrounds">
     <!--<div>-->
       <!--<ion-item class="col col-50" ng-repeat="day in days" href="#/app/playlists/{{day.id}}">-->
           <!--<h2>{{day.fields.Name}}</h2>-->
           <!--<h4>{{day.fields.Day}}</h4>-->
       <!--</ion-item>-->
     <!--</div>-->
-    <div ng-repeat="day in days" >
+    <div ng-repeat="day in days"  >
       <div class="row" ng-if="$even && days.length % 2 == 0">
-        <ion-item class="col col-50 text-center" href="#/app/playlists/{{days[$index].id}}">
-          <h2>{{days[$index].fields.Name}}</h2>
-          <h4>{{days[$index].fields.Day}}</h4>
+        <ion-item class="col col-50 text-center box-height"  href="#/app/playlists/{{days[$index].id}}">
+          <h2 class="item-name">{{days[$index].fields.Name}}</h2>
+          <h4 class="item-date">{{days[$index].fields.Day}}</h4>
         </ion-item>
-        <ion-item class="col col-50 text-center" href="#/app/playlists/{{days[$index+1].id}}">
-          <h2>{{days[$index+1].fields.Name}}</h2>
-          <h4>{{days[$index+1].fields.Day}}</h4>
+        <ion-item class="col col-50 text-center box-height" href="#/app/playlists/{{days[$index+1].id}}">
+          <h2 class="item-name">{{days[$index+1].fields.Name}}</h2>
+          <h4 class="item-date">{{days[$index+1].fields.Day}}</h4>
         </ion-item>
       </div>
 
       <div class="row" ng-if="$even && days.length % 2 != 0">
-        <ion-item ng-if = "$last" class="col col-99 text-center" href="#/app/playlists/{{days[$index].id}}">
-          <h2>{{days[$index].fields.Name}}</h2>
-          <h4>{{days[$index].fields.Day}}</h4>
+        <ion-item ng-if = "$last" class="col col-50 text-center box-height" href="#/app/playlists/{{days[$index].id}}">
+          <h2 class="item-name">{{days[$index].fields.Name}}</h2>
+          <h4 class="item-date">{{days[$index].fields.Day}}</h4>
         </ion-item>
-        <ion-item ng-if = "!$last" class="col col-50 text-center" href="#/app/playlists/{{days[$index].id}}">
-          <h2>{{days[$index].fields.Name}}</h2>
-          <h4>{{days[$index].fields.Day}}</h4>
+        <ion-item ng-if = "!$last" class="col col-50 text-center box-height" href="#/app/playlists/{{days[$index].id}}">
+          <h2 class="item-name">{{days[$index].fields.Name}}</h2>
+          <h4 class="item-date">{{days[$index].fields.Day}}</h4>
         </ion-item>
-        <ion-item ng-if = "!$last" class="col col-50 text-center" href="#/app/playlists/{{days[$index+1].id}}">
-          <h2>{{days[$index+1].fields.Name}}</h2>
-          <h4>{{days[$index+1].fields.Day}}</h4>
+        <ion-item ng-if = "!$last" class="col col-50 text-center box-height" href="#/app/playlists/{{days[$index+1].id}}">
+          <h2 class="item-name" >{{days[$index+1].fields.Name}}</h2>
+          <h4 class="item-date">{{days[$index+1].fields.Day}}</h4>
         </ion-item>
 
       </div>

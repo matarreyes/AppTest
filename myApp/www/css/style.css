@@ -1,3 +1,112 @@
-body{
+body {
+  background-color: unset;
+}
+
+.item-complex .item-content, .item-radio .item-content {
+  position: relative;
+  z-index: 2;
+  padding: 16px 49px 16px 16px;
+  border: none;
+  background-color: unset;
+}
+
+.list {
+  padding: 0px 0.6%;
+}
+
+/*.item-thumbnail-left.item-complex, .item-thumbnail-left {*/
+  /*width: 50%;*/
+  /*padding: 0px 0.4%;*/
+  /*padding-bottom: 0.5%;*/
+  /*border: none;*/
+  /*float: left;*/
+/*}*/
+
+.box-height {
+  height: 130px;
+  position: relative;
+  z-index: 2;
+  padding: 16px 49px 16px 16px;
+  margin:0px 3px 0px 3px;
+  background-color: rgba(82, 185, 220, 0.16);
+  border:none;
+}
+
+.backgrounds {
+  background: url("../img/BACKGROUND.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+h1, h2, h3, h4, h5, p, div {
+  font-family: 'Montserrat', sans-serif;
+}
+/*
+.item-p-days .days-date {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  display: inline-block;
+  background: rgba(82, 185, 220, 0.3);
+  padding: 5px;
+  padding-top: 15px;
+  color: #145368;
+  margin: 0;
+}
+*/
+.item-p-days .days-step {
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 0.8em;
+  font-weight: 700;
+  margin-top: 0.5em;
+}
+
+.item-p-days .days-dayname {
+  color: #ffdb81;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+.item-date {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  display: inline-block;
+  background: rgba(82, 185, 220, 0.3);
+  padding: 5px;
+  padding-top: 15px;
+  color: #145368;
+  margin: 0;
+}
+.item-name{
+  color: #ffdb81;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+/*Selected color of the menu button*/
+
+.button-color {
+  color: #FFC900 !important;
+}
+
+.item .item-content.activated {
+  border-color: unset;
+  background-color: unset;
+}
+
+.item.active.item-complex > .item-content,
+.item.activated.item-complex > .item-content,
+.item-complex.active .item-content.item-complex > .item-content,
+.item-complex.activated .item-content.item-complex > .item-content,
+.item .item-content.active.item-complex > .item-content,
+.item .item-content.activated.item-complex > .item-content {
+  border-color: unset;
+  background-color: unset;
+}
+
+.item-thumbnail-left .item-content, .item-complex .item-content {
 
 }
