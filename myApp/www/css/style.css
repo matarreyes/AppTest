@@ -2,18 +2,21 @@ body {
   background-color: unset;
 }
 
-.item-complex .item-content, .item-radio .item-content {
-  position: relative;
-  z-index: 2;
-  padding: 16px 49px 16px 16px;
-  border: none;
-  background-color: unset;
-}
-
+/*.item-complex .item-content, .item-radio .item-content {*/
+  /*position: relative;*/
+  /*z-index: 2;*/
+ /*!* padding: 16px 49px 16px 16px;*!*/
+  /*border: none;*/
+  /*background-color: unset;*/
+/*}*/
+/*
 .list {
   padding: 0px 0.6%;
 }
-
+*/
+.box-height > a {
+  background-color: unset!important;
+}
 /*.item-thumbnail-left.item-complex, .item-thumbnail-left {*/
   /*width: 50%;*/
   /*padding: 0px 0.4%;*/
@@ -26,10 +29,10 @@ body {
   height: 130px;
   position: relative;
   z-index: 2;
-  padding: 16px 49px 16px 16px;
   margin:0px 3px 0px 3px;
-  background-color: rgba(82, 185, 220, 0.16);
+  background-color:  rgba(82, 185, 220, 0.16);
   border:none;
+
 }
 
 .backgrounds {
@@ -42,7 +45,7 @@ body {
 h1, h2, h3, h4, h5, p, div {
   font-family: 'Montserrat', sans-serif;
 }
-
+/*
 .item-p-days .days-step {
   color: #fff;
   text-transform: capitalize;
@@ -57,7 +60,7 @@ h1, h2, h3, h4, h5, p, div {
   font-size: 0.8em;
   font-weight: 700;
 }
-
+*/
 .item-date {
   font-family: 'Open Sans', sans-serif;
   font-size: 10px;
@@ -85,7 +88,6 @@ h1, h2, h3, h4, h5, p, div {
   border-color: unset;
   background-color: unset;
 }
-
 .item.active.item-complex > .item-content,
 .item.activated.item-complex > .item-content,
 .item-complex.active .item-content.item-complex > .item-content,
@@ -96,6 +98,4 @@ h1, h2, h3, h4, h5, p, div {
   background-color: unset;
 }
 
-.item-thumbnail-left .item-content, .item-complex .item-content {
 
-}
