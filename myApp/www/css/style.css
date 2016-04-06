@@ -1,10 +1,28 @@
+/*Selected color of the menu button*/
+.button-color {
+  color: #ffdb81 !important;
+}
+/*App's fonts*/
+h1, h2, h3, h4, h5, p, div {
+  font-family: 'Montserrat', sans-serif;
+}
+/*Title colors*/
+span{
+  color: #ffdb81;
+}
+
+/*Dessign of Agenda's page*/
+/*Agenda Background's image*/
+*[view-title="Agenda"] > .scroll-content {
+  background: url("../img/BACKGROUND.jpg")center center;
+  background-size: cover;
+}
 #agenda .row{
   padding:1px;
 }
 #agenda_page ion-item{
   padding:0;
 }
-
 #agenda_page ion-item a{
   padding:0;
   padding-bottom:70px;
@@ -17,13 +35,14 @@
   text-align: left;
 }
 #agenda_page ion-item a h2{
-  display:inline-block;
   float:left;
+  text-align:center;
 }
+/*Needed because the background is still white without it*/
 .box-height > a {
   background-color: transparent!important;
-
 }
+/*Design of each box*/
 .box-height {
   height: 130px;
   position: relative;
@@ -33,10 +52,8 @@
   border:none;
 }
 
-h1, h2, h3, h4, h5, p, div {
-  font-family: 'Montserrat', sans-serif;
-}
 
+/*Items of each box*/
 .item-date {
   font-family: 'Open Sans', sans-serif;
   font-size: 10px;
@@ -47,13 +64,6 @@ h1, h2, h3, h4, h5, p, div {
   color: #145368;
   margin: 0;
 }
-*[view-title="Agenda"] > .scroll-content {
-  background: url("../img/BACKGROUND.jpg")center center;
-  background-size: cover;
-}
-span{
-color: #ffdb81;
-}
 .item-name{
 color: #ffdb81;
 text-transform: uppercase;
@@ -61,10 +71,47 @@ font-size: 0.8em;
 font-weight: 700;
 }
 
-/*Selected color of the menu button*/
 
-.button-color {
-  color: #ffdb81 !important;
+
+/*Design of side-menu*/
+.menu-left,.list ion-item{
+  background-color:#145368;
+}
+#menu_page .item-content {
+  background-color: transparent!important;
+}
+#menu_page .item{
+  border:none;
+  color:#ffdb81;
+}
+
+/*Design of schedule page*/
+#schedule{
+  color:transparent;
+  background-color:#145368;
+}
+#schedule .item{
+  color:grey;
+}
+#schedule h1{
+  color:deepskyblue;
+}
+
+#schedule .card .item{
+  background-color:transparent;
+}
+
+/*This one changes the box color*/
+#schedule .card{
+    background-color:cadetblue;
+}
+
+/*Design of activity page*/
+#activity_page{
+  background-color:#145368;
+}
+#activity_page h1{
+  color:deepskyblue;
 }
 
 
