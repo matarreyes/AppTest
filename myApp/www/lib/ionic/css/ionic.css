@@ -3351,6 +3351,8 @@ body.grade-c {
   position: relative; }
 
 .scroll-content {
+  /*background: url("../../../img/BACKGROUND.jpg")no-repeat center center fixed;*/
+  /*background-size: cover;*/
   position: absolute;
   top: 0;
   right: 0;

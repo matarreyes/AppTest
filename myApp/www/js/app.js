@@ -20,7 +20,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         StatusBar.styleDefault();
       }
 
-      $PouchDBListener.sync("http://192.168.0.116:5984/event"); //TODO Change ip 192.168.0.114
+      $PouchDBListener.sync("http://192.168.0.113qq:5984/event"); //TODO Change ip 192.168.0.114
     });
   })
   .config(function ($stateProvider, $urlRouterProvider) {

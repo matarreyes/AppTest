@@ -1,12 +1,29 @@
-ion-content{
-  background: url("../img/BACKGROUND.jpg");
-  background-size: cover;
+#agenda .row{
+  padding:1px;
+}
+#agenda_page ion-item{
+  padding:0;
 }
 
+#agenda_page ion-item a{
+  padding:0;
+  padding-bottom:70px;
+}
+#agenda_page ion-item a h4 {
+  margin-top:2px;
+  margin-left:2px;
+  margin-right:100%;
+  float: left;
+  text-align: left;
+}
+#agenda_page ion-item a h2{
+  display:inline-block;
+  float:left;
+}
 .box-height > a {
   background-color: transparent!important;
-}
 
+}
 .box-height {
   height: 130px;
   position: relative;
@@ -15,12 +32,6 @@ ion-content{
   background-color:  rgba(82, 185, 220, 0.16);
   border:none;
 }
-
-.backgrounds {
-  background: url("../img/BACKGROUND.jpg");
-  background-size: cover;
-}
-
 
 h1, h2, h3, h4, h5, p, div {
   font-family: 'Montserrat', sans-serif;
@@ -36,11 +47,18 @@ h1, h2, h3, h4, h5, p, div {
   color: #145368;
   margin: 0;
 }
+*[view-title="Agenda"] > .scroll-content {
+  background: url("../img/BACKGROUND.jpg")center center;
+  background-size: cover;
+}
+span{
+color: #ffdb81;
+}
 .item-name{
-  color: #ffdb81;
-  text-transform: uppercase;
-  font-size: 0.8em;
-  font-weight: 700;
+color: #ffdb81;
+text-transform: uppercase;
+font-size: 0.8em;
+font-weight: 700;
 }
 
 /*Selected color of the menu button*/

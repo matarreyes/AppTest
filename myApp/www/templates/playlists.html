@@ -1,39 +1,42 @@
-<ion-view view-title="Agenda">
+  <ion-view view-title="Agenda" id="agenda_page">
+    <!-- ion-nav-title is to give the title a color-->
+  <ion-nav-title>
+    <span>Agenda</span>
+  </ion-nav-title>
+<!--<div id="agenda_background">-->
   <ion-content>
-
-    <!--<div class="backgrounds">-->
-<!--TODO: test ion-content background-image
--->
+    <div id="agenda">
       <div ng-repeat="day in days">
         <div class="row" ng-if="$even && days.length % 2 == 0">
           <ion-item class="col col-50 text-center box-height" href="#/app/playlists/{{days[$index].id}}">
-            <h2 class="item-name">{{days[$index].fields.Name}}</h2>
             <h4 class="item-date">{{days[$index].fields.Day}}</h4>
+            <h2 class="item-name">{{days[$index].fields.Name}}</h2>
+
           </ion-item>
           <ion-item class="col col-50 text-center box-height" href="#/app/playlists/{{days[$index+1].id}}">
-            <h2 class="item-name">{{days[$index+1].fields.Name}}</h2>
             <h4 class="item-date">{{days[$index+1].fields.Day}}</h4>
+            <h2 class="item-name">{{days[$index+1].fields.Name}}</h2>
           </ion-item>
         </div>
 
         <div class="row" ng-if="$even && days.length % 2 != 0">
           <ion-item ng-if="$last" class="col col-50 text-center box-height" href="#/app/playlists/{{days[$index].id}}">
-            <h2 class="item-name">{{days[$index].fields.Name}}</h2>
             <h4 class="item-date">{{days[$index].fields.Day}}</h4>
+            <h2 class="item-name">{{days[$index].fields.Name}}</h2>
           </ion-item>
           <ion-item ng-if="!$last" class="col col-50 text-center box-height" href="#/app/playlists/{{days[$index].id}}">
-            <h2 class="item-name">{{days[$index].fields.Name}}</h2>
             <h4 class="item-date">{{days[$index].fields.Day}}</h4>
+            <h2 class="item-name">{{days[$index].fields.Name}}</h2>
           </ion-item>
           <ion-item ng-if="!$last" class="col col-50 text-center box-height"
                     href="#/app/playlists/{{days[$index+1].id}}">
-            <h2 class="item-name">{{days[$index+1].fields.Name}}</h2>
             <h4 class="item-date">{{days[$index+1].fields.Day}}</h4>
+            <h2 class="item-name">{{days[$index+1].fields.Name}}</h2>
           </ion-item>
 
         </div>
-
       </div>
-    <!--</div>-->
-  </ion-content>
+    </div>
+    </ion-content>
+  <!--</div>-->
 </ion-view>
