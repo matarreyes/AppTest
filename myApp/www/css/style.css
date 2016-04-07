@@ -10,6 +10,7 @@ h1, h2, h3, h4, h5, p, div {
 span{
   color: #1d6e84;
   float:none;
+  font-family: 'Montserrat', sans-serif bold;
 }
 
 /*Dessign of Agenda's page*/
@@ -74,8 +75,6 @@ span{
   font-weight: 700;
 }
 
-
-
 /*Design of side-menu*/
 .menu-left,.list ion-item{
   background-color:#145368;
@@ -88,70 +87,89 @@ span{
   color:#ffdb81;
 }
 
-/*Design of today page*/
-#today{
+/*Design of schedule,today's & activity page*/
+#schedule, #today,#activity_page{
   color:transparent;
-  background-color:#4fb5d7;
+  background-color:#0298B6;
 }
 
-#today a{
+#schedule a, #today a,#activity_page a{
   padding:0;
 }
-#today a div{
+#schedule a div, #today a div, #activity_page a div{
   padding:0;
 }
 
-#today .activity_name{
+#schedule .activity_name, #today .activity_name, #activity_page .activity_name{
   padding-left:10%;
   padding-right:20%;
   padding-top:5%;
   color:#eaeaea;
+  font-size:1.2em;
+  font-family:'Montserrat', sans-serif!important;
 }
-#today .activity_guest{
+#schedule .activity_guest, #today .activity_guest, #activity_page .activity_guest{
+  padding:0;
   padding-left:10%;
   padding-right:20%;
   padding-top:3%;
   color:#ffdb81;
+  font-family:'Open Sans', sans-serif!important;
+  font-size:1em;
+  text-transform:capitalize;
 }
-#today .activity_guest_company{
+
+#schedule .activity_guest_company, #today .activity_guest_company, #activity_page .activity_guest_company{
+  padding:0;
   padding-left:10%;
   padding-right:20%;
-  font-size:11px;
+  font-size:0.7em;
   color:#095067;
-  margin-top:-5px;/*Not sure if use it*/
+  font-family:'Open Sans', sans-serif!important;
 
 }
-#today .activity_location{
-  margin-left:8%;
+#schedule .activity_location, #today .activity_location{
+  margin-left:10%;
   margin-top:5%;
 }
-#today .location{
+#activity_page .activity_location{
+  margin-top:5%;
+  padding-left:10%;
+}
+#schedule .location, #today .location, #activity_page .location{
   float:left;
   background-color:#1d6e84;
   padding-left:2%;
   padding-right:2%;
   color:#ffdb81;
   text-align:center;
+  font-family:'Open Sans', sans-serif!important;
 }
-#today .place{
+#schedule .place, #today .place, #activity_page .place{
    /* width: 30%; */
   float: left;
   padding-left:2%;
   padding-right:5px;
   background-color: #ffdb81;
   color: #1d6e84;
+  font-family:'Open Sans', sans-serif!important;
 }
 .place span {
   padding-left:2%;
   color:#F97150 !important;
 }
-#today .activity_hour{
+#schedule .activity_hour, #today .activity_hour{
   margin-top:2%;
-  margin-left:8%;
+  margin-left:10%;
   margin-bottom:5%;
 }
+#activity_page .activity_hour{
+  margin-top:2%;
+  margin-bottom:5%;
+  padding-left:10%;
 
-#today .time{
+}
+#schedule .time, #today .time, #activity_page .time {
   float:left;
   background-color:#1d6e84;
   padding-left:2%;
@@ -159,7 +177,7 @@ span{
   color:#ffdb81;
   text-align:center;
 }
-#today .hour{
+#schedule .hour, #today .hour, #activity_page .hour{
   /* width: 30%; */
   float: left;
   padding-left:2%;
@@ -167,45 +185,45 @@ span{
   background-color: #ffdb81;
   color: #1d6e84;
 }
-
-/*#today .location{*/
-  /*width:20%;*/
-  /*float:left;*/
-  /*margin-left:10%;*/
-  /*margin-top:5%;*/
-  /*background-color:#1d6e84;*/
-  /*color:#ffdb81;*/
-  /*text-align:center;*/
-/*}*/
-/*#today .place {*/
-  /*!* width: 30%; *!*/
-  /*margin-top: 5%;*/
-  /*margin-right: 40%;*/
-  /*margin-left: 20%;*/
-  /*float: none;*/
-  /*padding-left: 15%;*/
-  /*background-color: #ffdb81;*/
-  /*color: #1d6e84;*/
-/*}*/
-#today h1{
-  color:deepskyblue;
+#schedule h1, #today h1, #activity_page h1{
+  color:#1d6e84;
+  font-weight: bold;
+  text-align: center;
 }
 
-#today .card .item{
+#schedule .card .item, #today .card .item{
   background-color:transparent;
 }
 
 /*This one changes the box color*/
-#today .card{
-    background-color:#48a3c2;
+#schedule .card, #today .card{
+  background-color:#02A6C5;
 }
 
-/*Design of activity page*/
-#activity_page{
-  background-color:#145368;
-}
-#activity_page h1{
-  color:deepskyblue;
+#container_activity_page{
+  height:100%;
+  padding:0;
 }
 
+#activity_page .activity_description{
+  max-width:100%;
+  min-height:100px;
+  font-size:0.8em;
+  color:#eaeaea;
+  padding-left:10%;
+}
+#activity_page .item{
+  background-color: transparent;
+}
+
+#gmaps{
+  margin-top:5px;
+  padding-left:10%;
+  padding-right:9%;
+  background: url("../img/BACKGROUND.jpg")center center;
+  border:none;
+}
+#activity_location{
+  width:40%;
+}
 

@@ -4,5 +4,42 @@
   </ion-nav-title>
   <ion-content>
     <h1>{{activity.fields.Name}} at {{activity.fields.Hour}}</h1>
+
+    <div id="container_activity_page">
+      <div class="item item-icon-left activity_name">
+      <b>Activity: </b><b>{{activity.fields.Name}}</b>
+    </div>
+    <div class="item item-icon-left activity_guest">
+      <b>{{activity.fields.Description}}</b>
+    </div>
+    <div class="item item-icon-left activity_guest_company">
+      Empresa SSL
+      <br/><button class="button button-icon ion-compose" >know him</button>
+      <!--<button id="know_him" href="#/app/playlists/guest.html">Know him!</button>-->
+    </div>
+    <div class="item item-icon-left ion-item scroll-y activity_description">
+      Basic Usage
+
+      The first step in embedding a calendar<br/>
+      on a web page is to have the right JavaScript<br/>
+      and CSS files. Make sure you are including the<br/>
+      FullCalendar stylesheet, as well as the FullCalendar,<br/>
+      jQuery, and Moment JavaScript files, in theof your page:
+
+      jQuery and Moment must be loaded before FullCalendar's JavaScript.
+
+      If you plan on doing dragging or resizing, you might need some additional dependencies. More information.
+
+      Once you have your dependencies, you need to write the JavaScript code that initializes the calendar. This code must be executed after the page has initialized. The best way to do this is with jQuery's $(document).ready like so:
+
+    </div>
+    <div class="item item-icon-left activity_location">
+     <div class="location">Location:</div><div class="place"> Fornells  <span class="ion-icon ion-location maps_icon"/></div>
+        <br/> <button id="gmaps" onclick="gMaps()">Find the location</button>
+    </div>
+    <div class="item item-icon-left activity_hour">
+      <div class="time">Time: </div><div class="hour">{{activity.fields.Hour}}</div>
+    </div>
+    </div>
   </ion-content>
 </ion-view>

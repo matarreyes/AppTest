@@ -1,18 +1,29 @@
-<ion-view view-title="Today">
+<ion-view id="today">
+  <ion-nav-title>
+    <span>Today</span>
+  </ion-nav-title>
   <ion-content>
     <h2 class="text-center" ng-if="isNotToday"> Nothing for today </h2>
+    <!--TODO: we need something to put here in case there's nothing to show-->
     <h1 class="text-center">{{today.fields.Name}} <br/> {{today.fields.Day}}</h1>
 
     <ion-item class = "list card" ng-repeat="activity in activities" href="#/app/playlists/{{today.id}}/{{activity.id}}">
-      <div class="item item-icon-left">
-        <b>Activity: </b>{{activity.fields.Name}}
+      <div class="item item-icon-left activity_name">
+        <b>Activity: </b><b>{{activity.fields.Name}}</b>
       </div>
-      <div class="item item-icon-left">
-        <b>Description: </b>{{activity.fields.Description}}
+      <div class="item item-icon-left activity_guest">
+        <b>{{activity.fields.Description}}</b>
       </div>
-      <div class="item item-icon-left">
-        <b>Hour: </b>{{activity.fields.Hour}}
+      <div class="item item-icon-left activity_guest_company">
+        Empresa SSL
       </div>
+      <div class="item item-icon-left activity_location">
+        <div class="location">Location:</div><div class="place"> Fornells  <span class="ion-icon ion-location maps_icon"/></div>
+      </div>
+      <div class="item item-icon-left activity_hour">
+        <div class="time">Time: </div><div class="hour">{{activity.fields.Hour}}</div>
+      </div>
+
     </ion-item>
 
   </ion-content>

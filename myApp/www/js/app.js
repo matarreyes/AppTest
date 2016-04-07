@@ -20,7 +20,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         StatusBar.styleDefault();
       }
 
-      $PouchDBListener.sync("http://192.168.0.113qq:5984/event"); //TODO Change ip 192.168.0.114
+      $PouchDBListener.sync("http://192.168.0.114:5984/event"); //TODO Change ip 192.168.0.114
     });
   })
   .config(function ($stateProvider, $urlRouterProvider) {
@@ -46,7 +46,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         url: '/playlists',
         views: {
           'menuContent': {
-            templateUrl: 'templates/playlists.html',
+            templateUrl: 'templates/agenda.html',
             controller: 'PlaylistsCtrl'
           }
         }
@@ -56,7 +56,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         url: '/playlists/:dayId',
         views: {
           'menuContent': {
-            templateUrl: 'templates/playlist.html',
+            templateUrl: 'templates/schedule.html',
             controller: 'PlaylistCtrl'
           }
         }
@@ -71,6 +71,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     });
+    
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/playlists');
