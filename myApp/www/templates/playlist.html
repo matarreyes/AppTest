@@ -1,16 +1,26 @@
-<ion-view view-title="Schedule" id="schedule">
+<ion-view id="today">
+  <ion-nav-title>
+    <span>Today</span>
+  </ion-nav-title>
   <ion-content>
     <h1 class="text-center">{{day.fields.Name}} <br/> {{day.fields.Day}}</h1>
     <ion-item class = "list card" ng-repeat="activity in activities" href="#/app/playlists/{{day.id}}/{{activity.id}}">
-      <div class="item item-icon-left">
+      <div class="item item-icon-left activity_name">
         <b>Activity: </b>{{activity.fields.Name}}
       </div>
-      <div class="item item-icon-left">
-        <b>Description: </b>{{activity.fields.Description}}
+      <div class="item item-icon-left activity_guest">
+       {{activity.fields.Description}}
       </div>
-      <div class="item item-icon-left">
-        <b>Hour: </b>{{activity.fields.Hour}}
+      <div class="item item-icon-left activity_guest_company">
+        Empresa SSL
       </div>
+      <div class="item item-icon-left activity_location">
+        <div class="location"><b>Location:</b></div><div class="place"> Fornells  <span class="ion-icon ion-location maps_icon"/></div>
+      </div>
+      <div class="item item-icon-left activity_hour">
+        <div class="time"><b>Time: </b></div><div class="hour">{{activity.fields.Hour}}</div>
+      </div>
+
     </ion-item>
   </ion-content>
 </ion-view>

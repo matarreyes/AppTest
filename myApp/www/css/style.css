@@ -8,7 +8,8 @@ h1, h2, h3, h4, h5, p, div {
 }
 /*Title colors*/
 span{
-  color: #ffdb81;
+  color: #1d6e84;
+  float:none;
 }
 
 /*Dessign of Agenda's page*/
@@ -65,10 +66,12 @@ span{
   margin: 0;
 }
 .item-name{
-color: #ffdb81;
-text-transform: uppercase;
-font-size: 0.8em;
-font-weight: 700;
+  padding-top:10px;
+  padding-left:5px;
+  color: #ffdb81;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 700;
 }
 
 
@@ -85,25 +88,116 @@ font-weight: 700;
   color:#ffdb81;
 }
 
-/*Design of schedule page*/
-#schedule{
+/*Design of today page*/
+#today{
   color:transparent;
-  background-color:#145368;
+  background-color:#4fb5d7;
 }
-#schedule .item{
-  color:grey;
+
+#today a{
+  padding:0;
 }
-#schedule h1{
+#today a div{
+  padding:0;
+}
+
+#today .activity_name{
+  padding-left:10%;
+  padding-right:20%;
+  padding-top:5%;
+  color:#eaeaea;
+}
+#today .activity_guest{
+  padding-left:10%;
+  padding-right:20%;
+  padding-top:3%;
+  color:#ffdb81;
+}
+#today .activity_guest_company{
+  padding-left:10%;
+  padding-right:20%;
+  font-size:11px;
+  color:#095067;
+  margin-top:-5px;/*Not sure if use it*/
+
+}
+#today .activity_location{
+  margin-left:8%;
+  margin-top:5%;
+}
+#today .location{
+  float:left;
+  background-color:#1d6e84;
+  padding-left:2%;
+  padding-right:2%;
+  color:#ffdb81;
+  text-align:center;
+}
+#today .place{
+   /* width: 30%; */
+  float: left;
+  padding-left:2%;
+  padding-right:5px;
+  background-color: #ffdb81;
+  color: #1d6e84;
+}
+.place span {
+  padding-left:2%;
+  color:#F97150 !important;
+}
+#today .activity_hour{
+  margin-top:2%;
+  margin-left:8%;
+  margin-bottom:5%;
+}
+
+#today .time{
+  float:left;
+  background-color:#1d6e84;
+  padding-left:2%;
+  padding-right:2%;
+  color:#ffdb81;
+  text-align:center;
+}
+#today .hour{
+  /* width: 30%; */
+  float: left;
+  padding-left:2%;
+  padding-right:5px;
+  background-color: #ffdb81;
+  color: #1d6e84;
+}
+
+/*#today .location{*/
+  /*width:20%;*/
+  /*float:left;*/
+  /*margin-left:10%;*/
+  /*margin-top:5%;*/
+  /*background-color:#1d6e84;*/
+  /*color:#ffdb81;*/
+  /*text-align:center;*/
+/*}*/
+/*#today .place {*/
+  /*!* width: 30%; *!*/
+  /*margin-top: 5%;*/
+  /*margin-right: 40%;*/
+  /*margin-left: 20%;*/
+  /*float: none;*/
+  /*padding-left: 15%;*/
+  /*background-color: #ffdb81;*/
+  /*color: #1d6e84;*/
+/*}*/
+#today h1{
   color:deepskyblue;
 }
 
-#schedule .card .item{
+#today .card .item{
   background-color:transparent;
 }
 
 /*This one changes the box color*/
-#schedule .card{
-    background-color:cadetblue;
+#today .card{
+    background-color:#48a3c2;
 }
 
 /*Design of activity page*/
