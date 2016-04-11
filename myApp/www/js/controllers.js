@@ -1,69 +1,40 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+  .controller('AppCtrl', function ($scope, $ionicModal, $timeout) {
 
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data,
-  // listen for the $ionicView.enter event:
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
+  })
 
-  // Form data for the login modal
-  //$scope.loginData = {};
-  //
-  //// Create the login modal that we will use later
-  //$ionicModal.fromTemplateUrl('templates/login.html', {
-  //  scope: $scope
-  //}).then(function(modal) {
-  //  $scope.modal = modal;
-  //});
-  //
-  //// Triggered in the login modal to close it
-  //$scope.closeLogin = function() {
-  //  $scope.modal.hide();
-  //};
-  //
-  //// Open the login modal
-  //$scope.login = function() {
-  //  $scope.modal.show();
-  //};
-  //
-  //// Perform the login action when the user submits the login form
-  //$scope.doLogin = function() {
-  //  console.log('Doing login', $scope.loginData);
-  //
-  //  // Simulate a login delay. Remove this and replace with your login
-  //  // code if using a login system
-  //  $timeout(function() {
-  //    $scope.closeLogin();
-  //  }, 1000);
-  //};
-})
-
-.controller('PlaylistsCtrl', function($scope, $q, $PouchDBListener) {
+  .controller('PlaylistsCtrl', function ($scope, $q, $PouchDBListener, $ionicLoading) {
     $PouchDBListener.startListening();
 
     $q.when(
       localDB.get('days')
-    ).then(function(doc){
+    ).then(function (doc) {
         $scope.days = doc.rows;
-    }).catch(function (err){
-      console.log(err);
-    });
+      }).catch(function (err) {
+        console.log(err);
+        $ionicLoading.show({
+          content: 'Loading',
+          animation: 'fade-in',
+          showBackdrop: true,
+          maxWidth: 200,
+          showDelay: 0
+        });
+      });
 
     /**
      * Puts the new data when changes
      */
-    $scope.$on('$PouchDBListener:change', function(event, data) {
-      if(data.id == 'days') {
+    $scope.$on('$PouchDBListener:change', function (event, data) {
+      if (data.id == 'days') {
         $scope.days = data.doc.rows;
+        $ionicLoading.hide();
         $scope.$apply();
       }
     });
-})
+  })
 
-.controller('PlaylistCtrl', function ($scope, $q, $stateParams) {
+  .controller('PlaylistCtrl', function ($scope, $q, $stateParams) {
     $q.when(
       localDB.get('days')
     ).then(function (doc) {
@@ -80,7 +51,7 @@ angular.module('starter.controllers', [])
     ).then(function (doc) {
         $scope.activities = doc.rows.filter(function (element) {
           return element.fields.Day[0] == $stateParams.dayId;
-        }).map(function(element){
+        }).map(function (element) {
           element.fields.Hour = moment(element.fields.Hour).format("HH:mm");
           return element;
         });
@@ -88,7 +59,7 @@ angular.module('starter.controllers', [])
         console.log(err);
       });
   })
-  .controller('ActivityCtrl', function ($scope, $q, $stateParams){
+  .controller('ActivityCtrl', function ($scope, $q, $stateParams) {
     $q.when(
       localDB.get('schedule')
     ).then(function (doc) {
@@ -100,7 +71,29 @@ angular.module('starter.controllers', [])
         console.log(err);
       });
   })
-  .controller('TodayCtrl', function ($scope, $q, $stateParams){
+  .controller('ModalCtrl', function($scope, $ionicModal) {
+
+    $ionicModal.fromTemplateUrl('templates/speaker.html', {
+      scope: $scope,
+      animation: 'slide-in-up',
+    }).then(function (modal) {
+      $scope.modal = modal;
+    });
+
+    $scope.openModal = function () {
+      $scope.modal.show();
+    };
+
+    $scope.closeModal = function () {
+      $scope.modal.hide();
+    };
+
+    //Cleanup the modal when we're done with it!
+    $scope.$on('$destroy', function () {
+      $scope.modal.remove();
+    });
+  })
+  .controller('TodayCtrl', function ($scope, $q, $stateParams) {
     $q.when(
       localDB.get('days')
     ).then(function (doc) {
@@ -108,16 +101,16 @@ angular.module('starter.controllers', [])
           return moment(element.fields.Day).format("DD-MM-YYYY") == moment().format("DD-MM-YYYY");
         });
 
-        if(todayList.length > 0){
+        if (todayList.length > 0) {
           $scope.today = todayList[0];
           $scope.isNotToday = false;
           return todayList.length;
-        }else{
+        } else {
           $scope.isNotToday = true;
           return 0;
         }
-      }).then(function(len){
-        if(len > 0) {
+      }).then(function (len) {
+        if (len > 0) {
           $q.when(
             localDB.get('schedule')
           ).then(function (doc) {
@@ -132,10 +125,8 @@ angular.module('starter.controllers', [])
             });
         }
       }
-      )
+    )
       .catch(function (err) {
         console.log(err);
       });
-
-
   });

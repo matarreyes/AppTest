@@ -3,43 +3,80 @@
     <span>Activity</span>
   </ion-nav-title>
   <ion-content>
-    <h1>{{activity.fields.Name}} at {{activity.fields.Hour}}</h1>
-
-    <div id="container_activity_page">
+    <ion-item>
       <div class="item item-icon-left activity_name">
-      <b>Activity: </b><b>{{activity.fields.Name}}</b>
-    </div>
-    <div class="item item-icon-left activity_guest">
-      <b>{{activity.fields.Description}}</b>
-    </div>
-    <div class="item item-icon-left activity_guest_company">
-      Empresa SSL
-      <!--<button id="know_him" href="#/app/playlists/guest.html">Know him!</button>-->
-    </div>
-      <button class="button button-icon ion-compose button_know">Know him</button>
-    <div class="item item-icon-left ion-item scroll-y activity_description">
-      Basic Usage
+        <b>Activity: </b><b>{{activity.fields.Name}}</b>
+      </div>
 
-      The first step in embedding a calendar<br/>
-      on a web page is to have the right JavaScript<br/>
-      and CSS files. Make sure you are including the<br/>
-      FullCalendar stylesheet, as well as the FullCalendar,<br/>
-      jQuery, and Moment JavaScript files, in theof your page:
+      <ion-list>
+        <!--internal list for guest people-->
+        <ion-item class="card" ng-controller="ModalCtrl" ng-click="openModal()">
+          <div class="item item-avatar-left activity_guest_pic">
+            <img src="../img/BACKGROUND.jpg">
 
-      jQuery and Moment must be loaded before FullCalendar's JavaScript.
+            <div class="item item-icon-right activity_guest">
+              <b>{{activity.fields.Description}}</b>
+            </div>
+            <i class="icon ion-ios-arrow-right arrow_ic"></i>
+            <div class="item item-icon-left activity_guest_company">
 
-      If you plan on doing dragging or resizing, you might need some additional dependencies. More information.
+              Empresa SSL
+              <!--<button id="know_him" href="#/app/playlists/guest.html">Know him!</button>-->
+            </div>
+          </div>
+        </ion-item>
+        <ion-item class="card ">
+          <div class="item item-avatar-left activity_guest_pic">
+            <img src="../img/BACKGROUND.jpg">
 
-      Once you have your dependencies, you need to write the JavaScript code that initializes the calendar. This code must be executed after the page has initialized. The best way to do this is with jQuery's $(document).ready like so:
+            <div class="item item-icon-right activity_guest">
+              <b>{{activity.fields.Description}}</b>
+            </div>
+            <i class="icon ion-ios-arrow-right myarrow"></i>
+            <div class="item item-icon-left activity_guest_company">
 
-    </div>
-    <div class="item item-icon-left activity_location">
-     <div class="location">Location:</div><div class="place"> Fornells </div>
-        <br/> <button id="gmaps">Find the location <span class="ion-icon ion-location maps_icon"/></button>
-    </div>
-    <div class="item item-icon-left activity_hour">
-      <div class="time">Time: </div><div class="hour">{{activity.fields.Hour}}</div>
-    </div>
-    </div>
+              Empresa SSL
+              <!--<button id="know_him" href="#/app/playlists/guest.html">Know him!</button>-->
+            </div>
+          </div>
+          </ion-item>
+
+      </ion-list>
+
+      <div class="item item-icon-left ion-item scroll-y activity_description">
+        Basic Usage
+
+        The first step in embedding a calendar on a web page is to have the right JavaScript and CSS files. Make sure you are including the FullCalendar stylesheet, as well as the FullCalendar,
+        jQuery, and Moment JavaScript files, in theof your page:
+
+        jQuery and Moment must be loaded before FullCalendar's JavaScript.
+
+        If you plan on doing dragging or resizing, you might need some additional dependencies. More information.
+
+        Once you have your dependencies, you need to write the JavaScript code that initializes the calendar. This code
+        must be executed after the page has initialized. The best way to do this is with jQuery's $(document).ready like
+        so:
+
+      </div>
+      <div class="item item-icon-left activity_location">
+        <div class="location">Location:</div>
+        <div class="place"> Fornells</div>
+        <br/>
+        <a class="open_maps" href="#" onclick="window.open('https://www.google.es/maps/place/Cam%C3%AD+de+Torret,+49,+07711+Sant+Llu%C3%ADs,+Illes+Balears/@39.8409077,4.2499427,17z/data=!4m2!3m1!1s0x129586156c2503e1:0x7ab04a13cbc19086?hl=ca', '_system', 'location=yes'); return false;">
+          Open in maps
+        </a>
+        <!--maps://?=39.8409077,4.2499427-->
+        <!--https://www.google.es/maps/place/Cam%C3%AD+de+Torret,+49,+07711+Sant+Llu%C3%ADs,+Illes+Balears/@39.8409077,4.2499427,17z/data=!4m2!3m1!1s0x129586156c2503e1:0x7ab04a13cbc19086?hl=ca-->
+
+        <!--<br/> <a id="gmaps" onclick="window.open('geo:lat,lon?q=Mao,Illes Balears', '_system')">Find the location <span class="ion-icon ion-location maps_icon"/></a>-->
+      </div>
+      <div class="item item-icon-left activity_hour">
+        <div class="time">Time:</div>
+        <div class="hour">{{activity.fields.Hour}}</div>
+
+      </div>
+
+      <div class="ending"></div>
+    </ion-item>
   </ion-content>
 </ion-view>

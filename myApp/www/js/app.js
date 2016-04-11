@@ -4,7 +4,8 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-var localDB = new PouchDB("eventLocal");
+var localDB = new PouchDB("eventLocal", {auto_compaction:true, adapter: 'websql'});
+
 angular.module('starter', ['ionic', 'starter.controllers'])
   .run(function ($ionicPlatform, $PouchDBListener) {
     $ionicPlatform.ready(function () {
@@ -20,7 +21,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         StatusBar.styleDefault();
       }
 
-      $PouchDBListener.sync("http://192.168.0.114:5984/event"); //TODO Change ip 192.168.0.114
+      $PouchDBListener.sync(""); //TODO Change ip 192.168.0.114
     });
   })
   .config(function ($stateProvider, $urlRouterProvider) {
@@ -62,16 +63,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       })
 
-    .state('app.activity', {
-      url: '/playlists/:dayId/:activityId',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/activity.html',
-          controller: 'ActivityCtrl'
+      .state('app.activity', {
+        url: '/playlists/:dayId/:activityId',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/activity.html',
+            controller: 'ActivityCtrl'
+          }
         }
-      }
-    });
-    
+      });
+
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/playlists');
@@ -102,7 +103,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
      * @param remoteDatabase
      */
     this.sync = function (remoteDatabase) {
-      localDB.sync(remoteDatabase, {live: true, retry: true});
+      localDB.replicate.from(remoteDatabase, {live: true, retry: true});
+
     }
   }]);
-

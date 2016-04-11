@@ -2,58 +2,73 @@
 .button-color {
   color: #ffdb81 !important;
 }
+
 /*App's fonts*/
 h1, h2, h3, h4, h5, p, div {
   font-family: 'Montserrat', sans-serif;
 }
+
 /*Title colors*/
-span{
+span {
   color: #1d6e84;
-  float:none;
+  float: none;
+  text-align: center;
   font-family: 'Montserrat', sans-serif bold;
 }
 
 /*Dessign of Agenda's page*/
 /*Agenda Background's image*/
 *[view-title="Agenda"] > .scroll-content {
-  background: url("../img/BACKGROUND.jpg")center center;
+  background: url("../img/BACKGROUND.jpg") center center;
   background-size: cover;
 }
-#agenda .row{
-  padding:1px;
+
+#agenda .row {
+  padding: 1px;
 }
-#agenda_page ion-item{
-  padding:0;
+
+#agenda_page ion-item {
+  padding: 0;
 }
-#agenda_page ion-item a{
-  padding:0;
-  padding-bottom:70px;
+
+#agenda_page ion-item a {
+  padding: 0;
+  padding-bottom: 70px;
 }
+
 #agenda_page ion-item a h4 {
-  margin-top:2px;
-  margin-left:2px;
-  margin-right:100%;
+  margin-top: 2px;
+  margin-left: 2px;
+  margin-right: 100%;
   float: left;
   text-align: left;
 }
-#agenda_page ion-item a h2{
-  float:left;
-  text-align:center;
+
+#agenda_page ion-item a h2 {
+  float: left;
+  text-align: center;
 }
+
+/*Makes the title align at center*/
+.platform-android .bar .title {
+  text-align: center;
+  padding-right: 10%;
+}
+
 /*Needed because the background is still white without it*/
 .box-height > a {
-  background-color: transparent!important;
+  background-color: transparent !important;
 }
+
 /*Design of each box*/
 .box-height {
   height: 130px;
   position: relative;
   z-index: 2;
-  margin:0px 1px 0px 1px;
-  background-color:  rgba(82, 185, 220, 0.16);
-  border:none;
+  margin: 0px 1px 0px 1px;
+  background-color: rgba(82, 185, 220, 0.16);
+  border: none;
 }
-
 
 /*Items of each box*/
 .item-date {
@@ -66,9 +81,10 @@ span{
   color: #145368;
   margin: 0;
 }
-.item-name{
-  padding-top:10px;
-  padding-left:5px;
+
+.item-name {
+  padding-top: 10px;
+  padding-left: 5px;
   color: #ffdb81;
   text-transform: uppercase;
   font-size: 0.8em;
@@ -76,160 +92,233 @@ span{
 }
 
 /*Design of side-menu*/
-.menu-left,.list ion-item{
-  background-color:#145368;
+.menu-left, .list ion-item {
+  background-color: #145368;
 }
+
 #menu_page .item-content {
-  background-color: transparent!important;
+  background-color: transparent !important;
 }
-#menu_page .item{
-  border:none;
-  color:#ffdb81;
+
+#menu_page .item {
+  border: none;
+  color: #ffdb81;
+  white-space: unset;
+  text-overflow:unset;
 }
 
 /*Design of schedule,today's & activity page*/
-#schedule, #today,#activity_page{
-  color:transparent;
-  background-color:#0298B6;
+#schedule, #today, #activity_page {
+  color: transparent;
+  background-color: #0298B6;
 }
 
-#schedule a, #today a,#activity_page a{
-  padding:0;
-}
-#schedule a div, #today a div, #activity_page a div{
-  padding:0;
+/*Restarting the padding*/
+#schedule a, #today a, #activity_page a {
+  padding: 0;
 }
 
-#schedule .activity_name, #today .activity_name, #activity_page .activity_name{
-  padding-left:10%;
-  padding-right:20%;
-  padding-top:5%;
-  color:#eaeaea;
-  font-size:1.2em;
-  font-family:'Montserrat', sans-serif!important;
-}
-#schedule .activity_guest, #today .activity_guest, #activity_page .activity_guest{
-  padding:0;
-  padding-left:10%;
-  padding-right:20%;
-  padding-top:3%;
-  color:#ffdb81;
-  font-family:'Open Sans', sans-serif!important;
-  font-size:1em;
-  text-transform:capitalize;
+#schedule a div, #today a div, #activity_page a div {
+  padding: 0;
 }
 
-#schedule .activity_guest_company, #today .activity_guest_company, #activity_page .activity_guest_company{
-  padding:0;
-  padding-left:10%;
-  padding-right:20%;
-  font-size:0.7em;
-  color:#095067;
-  font-family:'Open Sans', sans-serif!important;
+#schedule .activity_name, #today .activity_name{
+  padding-left: 5%;
+  padding-right: 10%;
+  padding-top: 5%;
+  color: #eaeaea;
+  font-size: 1.2em;
+  font-family: 'Montserrat', sans-serif !important;
+}
 
-}
-#schedule .activity_location, #today .activity_location{
-  margin-left:10%;
-  margin-top:5%;
-}
-#activity_page .activity_location{
-  margin-top:5%;
-  padding-left:10%;
-}
-#schedule .location, #today .location, #activity_page .location{
-  float:left;
-  background-color:#1d6e84;
-  padding-left:2%;
-  padding-right:2%;
-  color:#ffdb81;
+#activity_page .activity_name{
   text-align:center;
-  font-family:'Open Sans', sans-serif!important;
+  padding-top: 5%;
+  color: #eaeaea;
+  font-size: 1.2em;
+  font-family: 'Montserrat', sans-serif !important;
 }
-#schedule .place, #today .place, #activity_page .place{
-   /* width: 30%; */
+  #schedule .activity_guest, #today .activity_guest {
+  padding: 0;
+  padding-left: 5%;
+  padding-right: 10%;
+  padding-top: 3%;
+  color: #ffdb81;
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 1em;
+  text-transform: capitalize;
+}
+
+#activity_page .activity_guest {
+  padding: 0;
+  padding-top: 3%;
+  color: #ffdb81;
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 1em;
+  text-transform: capitalize;
+}
+
+#schedule .activity_guest_company, #today .activity_guest_company {
+  padding: 0;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 10%;
+  font-size: 0.7em;
+  color: #095067;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+#activity_page .activity_guest_company {
+  padding: 0;
+  padding-bottom: 5%;
+  font-size: 0.7em;
+  color: #095067;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+#schedule .activity_location, #today .activity_location {
+
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+#activity_page .activity_location {
+  padding: 0;
+  margin-top: 5%;
+  margin-bottom: 10px;
+  padding-left: 5%;
+}
+
+#schedule .location, #today .location, #activity_page .location {
   float: left;
-  padding-left:2%;
-  padding-right:5px;
+  background-color: #1d6e84;
+  padding-left: 2%;
+  padding-right: 2%;
+  color: #ffdb81;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+#schedule .place, #today .place, #activity_page .place {
+  float: left;
+  padding-left: 2%;
+  padding-right: 5px;
   background-color: #ffdb81;
   color: #1d6e84;
-  font-family:'Open Sans', sans-serif!important;
+  font-family: 'Open Sans', sans-serif !important;
 }
-.button_know{
-  padding-left:10%;
-  line-height: 0;
-  min-height:0;
-}
-#gmaps span {
-  padding-left:2%;
-  color:#F97150 !important;
-}
-#schedule .activity_hour, #today .activity_hour{
-  margin-top:2%;
-  margin-left:10%;
-  margin-bottom:5%;
-}
-#activity_page .activity_hour{
-  margin-top:2%;
-  margin-bottom:5%;
-  padding-left:10%;
 
+.open_maps{
+  color:#ffdb81;
+  font-family: 'Open Sans', sans-serif !important;
+  float:left;
+  text-decoration:none;
 }
+.arrow_ic {
+  float: right;
+  padding-bottom: 10%;
+}
+
+#schedule .activity_hour, #today .activity_hour, #activity_page .activity_hour {
+  padding: 0;
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+
 #schedule .time, #today .time, #activity_page .time {
-  float:left;
-  background-color:#1d6e84;
-  padding-left:2%;
-  padding-right:2%;
-  color:#ffdb81;
-  text-align:center;
-}
-#schedule .hour, #today .hour, #activity_page .hour{
-  /* width: 30%; */
+  font-family: 'Open Sans', sans-serif !important;
   float: left;
-  padding-left:2%;
-  padding-right:5px;
+  background-color: #1d6e84;
+  padding-left: 2%;
+  padding-right: 2%;
+  color: #ffdb81;
+  text-align: center;
+}
+
+#schedule .hour, #today .hour, #activity_page .hour {
+
+  font-family: 'Open Sans', sans-serif !important;
+  float: left;
+  padding-left: 2%;
+  padding-right: 5px;
   background-color: #ffdb81;
   color: #1d6e84;
 }
-#schedule h1, #today h1, #activity_page h1{
-  color:#1d6e84;
+
+#schedule h1, #today h1, #activity_page h1 {
+  color: #1d6e84;
   font-weight: bold;
   text-align: center;
 }
 
-#schedule .card .item, #today .card .item{
-  background-color:transparent;
-}
-
-/*This one changes the box color*/
-#schedule .card, #today .card{
-  background-color:#02A6C5;
-}
-
-#container_activity_page{
-  height:100%;
-  padding:0;
-}
-
-#activity_page .activity_description{
-  max-width:100%;
-  min-height:100px;
-  font-size:0.8em;
-  color:#eaeaea;
-  padding-left:10%;
-}
-#activity_page .item{
+#schedule .card .item, #today .card .item {
   background-color: transparent;
 }
 
-#gmaps{
-  margin-top:5px;
+#activity_page .card {
+  padding-top: 5%;
+  border: none;
+}
+
+.ending {
+  margin-bottom: 10%;
+}
+
+/*This one changes the box color*/
+#schedule .card, #today .card {
+  background-color: #02A6C5;
+}
+
+#container_activity_page {
+  height: 100%;
+  padding: 0;
+}
+
+#activity_page .activity_description {
+  max-width: 100%;
+  min-height: 100px;
+  font-size: 0.8em;
+  color: #eaeaea;
+  padding-left: 5%;
+  padding-right: 5%;
+  white-space: pre-line !important;
+}
+
+#activity_page .item {
+  background-color: transparent;
+}
+
+#gmaps {
+  margin-top: 5px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background: url("../img/BACKGROUND.jpg") center center;
+  border: none;
+  font-size: 0.9em;
+}
+
+
+/*Page speaker*/
+
+.pic{
+  /*position:absolute;*/
+  border:1px solid black;
+  width: 10em;
+  height: 10em;
+  margin:15px;
+  margin-right:40px;
+  float:left;
+}
+.link1{
+  float:right;
+
+}
+.desc{
+
+  padding-top:20%;
+  white-space: pre-line;
   padding-left:5%;
   padding-right:5%;
-  background: url("../img/BACKGROUND.jpg")center center;
-  border:none;
-  font-size:0.9em;
-}
-#activity_location{
-  width:40%;
 }
 
